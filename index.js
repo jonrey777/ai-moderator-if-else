@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 dotenv.config({ path: '.env.settings' });
-const { HOST, PORT, PLATFORM_URL, PLATFORM_TOKEN } = process.env;
+const { HOST, PORT, PLATFORM_URL, PLATFORM_TOKEN , CRON_SECONDS} = process.env;
 
 const DataStore = require('nestdb');
 const db = {};
@@ -30,4 +30,4 @@ const action = require('./action')(db);
 cron({
     platform_url : PLATFORM_URL,
     platform_token : PLATFORM_TOKEN
-}, action.webhook, 7);
+}, action.webhook, CRON_SECONDS);

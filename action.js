@@ -43,7 +43,8 @@ const Action = (db) => {
     };
 
     const webhook = async ({platform_url, platform_token}) => {
-        console.log('webhook call');
+        try {
+            console.log('webhook call');
         const output = [];
         let undone = await assetsModel.getUndoneOne();
         if (!undone) {
@@ -76,7 +77,7 @@ const Action = (db) => {
             if (resulthttp.data?.error_code) {
                 console.log(resulthttp.data);
             } else {
-                console.log('webhook done');
+                console.log('webhoock done');
                 await assetsModel.upsert(undone.application_sid, undone);
             }
         } else {
@@ -84,6 +85,9 @@ const Action = (db) => {
         }
 
         return true;
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     return {
