@@ -1,0 +1,20 @@
+{
+  "name": "ai-moderator-if-else",
+  "version": "1.0.0",
+  "description": "AI Moderator Tester - not an Artificial Intelligence really, 🤣 It is a randomized result that will generate from hard coded data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Rey Galera",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "nestdb": "^2.0.0",
+    "uuid": "^8.3.2"
+  }
+}
