@@ -1,5 +1,5 @@
 {
-  "name": "ai-moderator-if-else",
+  "name": "fake-ai",
   "version": "1.0.0",
   "description": "AI Moderator Tester - not an Artificial Intelligence really, 🤣 It is a randomized result that will generate from hard coded data.",
   "main": "index.js",

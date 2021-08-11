@@ -71,7 +71,7 @@ const Action = (db) => {
                 'Authorization' : `Bearer ${platform_token}`
             }
         }
-        const resulthttp = await axios.post(`${platform_url}/api/l1ght-webhook`, applicationData, options);
+        const resulthttp = await axios.post(`${platform_url}/l1ght-webhook`, applicationData, options);
 
         if (resulthttp.status >= 200 && resulthttp.status <= 299) {
             if (resulthttp.data?.error_code) {

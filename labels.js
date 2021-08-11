@@ -15,14 +15,14 @@ const status = [
 const analyzeContent = (type, iswebhooks = false) => {
     const randStatus = status[Math.floor(Math.random() * status.length) + 1];
 
-    if (randStatus === 'REGISTERED' || !iswebhooks) {
-        return {
-            status : 'REGISTERED'
-        };
-    }
+    // if (randStatus === 'REGISTERED' || !iswebhooks) {
+    //     return {
+    //         status : 'REGISTERED'
+    //     };
+    // }
 
     let output = {
-        status : randStatus
+        status : 'DONE'
     };
 
     let result = [];
@@ -30,9 +30,9 @@ const analyzeContent = (type, iswebhooks = false) => {
         result = [ 'NONE', 'PORN', 'ESCORT', 'SEXUAL_CONTENT', 'HATE'];
     }
     else if(type === labels.IMAGE || type === labels.GIF || type === labels.VIDEO) {
-        result = [ 'NONE', 'SEXUAL_ACTIVITY', 'NUDITY', 'ART_SEXUAL', 'EROTICA', 'NONE', 'CSAM', 'UNDERAGE_CHILD', 'UNDERAGE_TEEN', 'THREAT' ];
+        result = [ 'NONE', 'SEXUAL_ACTIVITY', 'NUDITY', 'ART_SEXUAL', 'EROTICA', 'CSAM', 'UNDERAGE_CHILD', 'UNDERAGE_TEEN' ];
     } else if (labels.TEXT) {
-        result = [ 'NONE', 'PERSONAL_INSULT', 'HATE', 'SHAMING', 'SELF_HARM', 'PROFANITY', 'SEXUAL_CONTENT_TALK', 'SEXUAL_CONTENT_ACTION', 'THREAT'];
+        result = [ 'NONE', 'PERSONAL_INSULT', 'HATE', 'SHAMING', 'SELF_HARM', 'PROFANITY', 'SEXUAL_CONTENT_TALK', 'SEXUAL_CONTENT_ACTION'];
     } else {
         return false;
     }

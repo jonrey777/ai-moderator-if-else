@@ -1,4 +1,4 @@
-# ai-moderator-if-else
+# fake-ai
 AI Moderator Tester - not an Artificial Intelligence really, 🤣 It is a randomized result that will generate from hard coded data.
 
 # Config
