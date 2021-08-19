@@ -15,11 +15,11 @@ const status = [
 const analyzeContent = (type, iswebhooks = false) => {
     const randStatus = status[Math.floor(Math.random() * status.length) + 1];
 
-    // if (randStatus === 'REGISTERED' || !iswebhooks) {
-    //     return {
-    //         status : 'REGISTERED'
-    //     };
-    // }
+    if (randStatus === 'REGISTERED' || !iswebhooks) {
+        return {
+            status : 'REGISTERED'
+        };
+    }
 
     let output = {
         status : 'DONE'
